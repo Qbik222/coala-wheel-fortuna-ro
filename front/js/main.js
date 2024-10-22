@@ -437,8 +437,8 @@
                 sections.addEventListener("animationend", () => showPopup(sections, wheel, "_bonus", streakBonus, spinBg, popupCloseBtn, popupContainer, popup, "lei20"), {once: true})
                 spinWheel(1942, "lei20anim", sections, btn, wheel, arrow, prize, spinBg, salut)
             }
-            if(prize === "lei30"){
-                sections.addEventListener("animationend", () => showPopup(sections, wheel, "_bonus", streakBonus, spinBg, popupCloseBtn, popupContainer, popup, "lei20"), {once: true})
+            if(prize === "lei25"){
+                sections.addEventListener("animationend", () => showPopup(sections, wheel, "_bonus", streakBonus, spinBg, popupCloseBtn, popupContainer, popup, "lei25"), {once: true})
                 spinWheel(1908, "lei30anim", sections, btn, wheel, arrow, prize, spinBg, salut)
             }
             if(prize === "respin"){
