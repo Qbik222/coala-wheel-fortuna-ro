@@ -447,7 +447,7 @@
             }
         })
     }
-    initSpin(wheelSections, wheelBtn, wheelWrap, wheelArrow, spinBg, salut, "lei30", streakBonus)
+    initSpin(wheelSections, wheelBtn, wheelWrap, wheelArrow, spinBg, salut, "respin", streakBonus)
     //
     // function refreshUserInfo(userInfo) {
     //     refreshDailyPointsSection(userInfo);
