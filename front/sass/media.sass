@@ -78,7 +78,6 @@
   .wheel
     &__logo
       max-width: 250px
-      margin-top: -10px
     &__wrap
       margin: -120px 0
       transform: scale(.7)
@@ -230,8 +229,8 @@
         margin: 0 40px 0 auto
         position: relative
         &::before
-         box-shadow: 2px 0px 14px 14px #76FFD5
-         transform: rotate(2deg)
+          box-shadow: 2px 0px 14px 14px #76FFD5
+          transform: rotate(2deg)
         &::after
           content: ""
           display: block
@@ -650,8 +649,26 @@
             min-height: 460px
             max-height: 460px
             &._done
-              min-height: 490px
-              max-height: 490px
+              min-height: 520px
+              max-height: 520px
+      &._bonus.fs40
+        .popup
+          &__main
+            min-height: 560px
+      &._bonus.fs40._incomplete
+        .popup
+          &__main
+            min-height: 570px
+      &._bonus.lei15, &._bonus.lei20, &._bonus.lei25
+        .popup
+          &__main
+            height: 490px
+            min-height: 490px
+      &._incomplete.lei15, &._incomplete.lei20, &._incomplete.lei25
+        .popup
+          &__main
+            min-height: 480px
+            height: 480px
       &__decor
         &-left
           &::before
