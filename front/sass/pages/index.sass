@@ -1581,6 +1581,7 @@ body
               color: $white
               font-family: $font-suisse-intl-reg
               margin-top: 10px
+              max-width: 370px
           &__days
             display: flex
             align-items: center
@@ -1671,8 +1672,8 @@ body
         &__text
           font-size: 24px
           max-width: 250px
-          //br
-          //  display: none
+        //br
+        //  display: none
         &__bottom._incomplete
           .popup__text
             font-size: 32px
@@ -2272,54 +2273,117 @@ body
         @media screen and (max-width: 1050px)
           background: url("../img/wheel/mob/wheel-sections-en.png") no-repeat 0 0/contain
     &__days-title
-      top: -105px
+      top: -75px
+      left: 15px
+      max-width: none
+      font-size: 30px
+      line-height: 34px
+      @media screen and (max-width: 880px)
+        font-size: 21px
+        line-height: 24px
+        max-width: 175px
+        top: -20px
+        left: 25px
     &__lock
       &-title
         font-size: 29px
       &-buble
         padding: 25px 45px 10px 35px
-  .popup
-    &__buble
-      &-text
-        font-size: 25px
-        margin-top: 10px
-    &__main
-      height: 575px
-    &__bottom._done
-      .popup__text
-        br
-          display: block
-          @media screen and (max-width: 600px)
-            display: block
-    &__bottom._incomplete
-      .popup__text
-        br
-          display: none
-    &._nothing
-      .popup
-        &__text
+  .popups
+    .popup
+      &._nothing
+        .popup__main
+          height: 365px
+        .popup__buble
+          padding: 50px 30px 30px 40px
+          &-title
+            font-size: 33px
+            line-height: 33px
+            @media screen and (max-width: 600px)
+              font-size: 26px
+              line-height: 26px
+
+      &__title
+        font-size: 37px
+        line-height: 39px
+      &__buble
+        &-text
+          font-size: 25px
+          margin-top: 10px
+      &__main
+        height: 575px
+      &__bottom._done
+        .popup__text
           br
             display: block
-        &__main
-          padding-top: 50px
-    &._bonus
-      .popup
-        &__buble
-          &-text
-            font-size: 29px
-            line-height: 37px
-        &__main
-          height: 490px
-    &._incomplete
-      .popup
-        &__main
-          height: 460px
-  .popup._nothing._incomplete
-    .popup__main
-      height: 340px
+            @media screen and (max-width: 600px)
+              display: block
+        .popup__prize-title
+          width: 310px
+      &__bottom._incomplete
+        .popup__text
+          br
+            display: none
+      &._nothing
+        .popup
+          &__text
+            br
+              display: block
+          &__main
+            padding-top: 50px
+      &._bonus
+        .popup__bottom._incomplete
+          .popup__text
+            max-width: 320px
+            font-size: 24px
+            line-height: 28px
+        .popup
+          &__buble
+            &-text
+              font-size: 29px
+              line-height: 37px
+          &__main
+            height: 530px
+      &._bonus.fs40
+        .popup
+          &__main
+            height: 580px
+      &._bonus.lei15, &._bonus.lei20, &._bonus.lei25
+        .popup
+          &__main
+            height: 500px
+      &._incomplete
+        .popup
+          &__main
+            @media screen and (max-width: 600px)
+              min-height: 530px
+      &._incomplete.lei15, &._incomplete.lei20, &._incomplete.lei25
+        .popup
+          &__main
+            height: 470px
+    .popup._nothing._incomplete
+      .popup__text
+        font-size: 24px
+        line-height: 28px
+      .popup__main
+        height: 320px
+        min-height: 320px
+
 
 @media screen and (max-width: 600px)
   .en
+    .popups
+      .popup._nothing
+        .popup__main._done
+          .popup__text
+            font-size: 18px
+            max-width: 290px
+    .days
+      &__title
+        font-size: 24px
+        line-height: 28px
+      &__prize
+        width: 310px
     .popups
       .popup
         &__text
@@ -2340,17 +2404,43 @@ body
               &-text
                 font-size: 16px
 
+@media screen and (max-width: 430px) and (min-height: 890px) and (orientation: portrait)
+  .en
+    .popups
+      .popup
+        transform: scale(.8) translate(-50%, -50%)
+        top: 50%
+
+
+@media screen and (max-width: 450px) and (max-height: 870px) and (orientation: portrait)
+  .en
+    .popups
+      .popup
+        transform: scale(.82) translate(-50%, -50%)
+        top: 50%
+
 @media screen and (max-width: 430px) and (max-height: 770px) and (orientation: portrait)
   .en
     .popups
       .popup
-        transform: scale(.83) translate(-50%, -50%)
+        transform: scale(.74) translate(-50%, -50%)
+        top: 40%
+        &._nothing
+          top: 45%
+
+@media screen and (max-width: 400px) and (max-height: 790px) and (orientation: portrait)
+  .en
+    .popups
+      .popup
+        transform: scale(.8) translate(-50%, -50%)
+        top: 50%
 
 @media screen and (max-width: 385px) and (max-height: 745px) and (orientation: portrait)
   .en
     .popups
       .popup
-        transform: scale(.8) translate(-50%, -50%)
+        top: 41%
+        transform: scale(.75) translate(-50%, -50%)
 
 @media screen and (max-width: 375px) and (max-height: 670px) and (orientation: portrait)
   .en
@@ -2362,7 +2452,24 @@ body
   .en
     .popups
       .popup
-        transform: scale(.63) translate(-50%, -50%)
+        top: 34%
+        transform: scale(.6) translate(-50%, -50%)
+        &._nothing
+          top: 35%
+
+@media screen and (max-width: 345px) and (min-height: 800px)
+  .en
+    .popups
+      .popup
+        top: 45%
+        transform: scale(.7) translate(-50%, -50%)
+
+@media screen and (max-width: 320px) and (min-height: 720px)
+  .en
+    .popups
+      .popup
+        top: 42%
+        transform: scale(.7) translate(-50%, -50%)
 
 @media screen and (max-width: 950px) and (max-height: 450px) and (orientation: landscape)
   .en
